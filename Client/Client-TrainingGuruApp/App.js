@@ -12,6 +12,9 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {Router, Route, Switch} from "./routing";
 import ClientHome from "./pages/client/ClientHome";
 
+import RegisterClient from "./pages/registration-login/RegisterClient";
+import RegisterTrainer from "./pages/registration-login/RegisterTrainer";
+
 function HomeScreen() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -44,6 +47,9 @@ export default function App() {
                   <Route exact path="/" render={props => <Home {...props} />} />
                   <Route path="/profile" render={props => <Profile {...props} />} />
                   <Route exact path="/homeclient" render={props => <ClientHome {...props} />} />
+                  <Route exact path="/login" render={props => <Login {...props} />} />
+                  <Route exact path="/registerclient" render={props => <RegisterClient {...props} />} />
+                  <Route exact path="/registertrainer" render={props => <RegisterTrainer {...props} />} />
               </Switch>
           </Router>
       </View>
